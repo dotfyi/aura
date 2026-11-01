@@ -106,14 +106,14 @@
     <div class="bar">
       <div class="strip" id="strip"></div>
       <div class="axis"><span>2018</span><span>зараз</span></div>
-      <p class="cap">Один відрізок — один рік. 💍 — наше весілля.</p>
+      <p class="cap">Один відрізок — один рік.</p>
     </div>
   </header>
 
   <hr>
 
   <section>
-    <h2 class="rv">Це багато</h2>
+    <h2 class="rv">Глава перша</h2>
     <p class="lead rv">Наш час у цифрах</p>
     <ul class="stats rv" id="stats"></ul>
   </section>
@@ -128,24 +128,9 @@
 
   <hr>
 
-  <section class="rv">
-    <h2>25 грудня 2025</h2>
-    <div class="callout red">
-      <div class="ci">💍</div>
-      <div>
-        <div class="big">Цього дня ми одружились</div>
-        <p>І стали сім'єю.</p>
-      </div>
-    </div>
-  </section>
-
-  <hr>
+  
 
   <section>
-    <h2 class="rv">Наприкінці</h2>
-    <div class="quote rv">Дякую, що ти поруч у звичайні дні й у непрості.</div>
-    <div class="quote rv">Дякую за терпіння, за сміх і за те, що ти — це ти.</div>
-    <div class="quote rv">Я не знаю, що ще змінить час, але точно знаю, з ким хочу це побачити.</div>
     <p class="sign rv" id="sign"></p>
     <div class="cta rv">
       <div class="hint"><small>натисни</small><span class="pt" aria-hidden="true">👉</span></div>
@@ -238,11 +223,11 @@ if (WEDDING <= now) {
 const days = Math.floor(ms / DAY), hours = Math.floor(ms / 36e5), mins = Math.floor(ms / 6e4);
 const stats = [
   ["📆", fmt(days), pl(days, ["день", "дні", "днів"]) + " разом"],
-  ["⏰", fmt(hours), pl(hours, ["година", "години", "годин"]) + ", прожитих поруч"],
+  ["🫂", fmt(hours), pl(hours, ["година", "години", "годин"]) + ", прожитих поруч"],
   ["🍂", fmt(Math.floor(days / 91.31)), "пір року змінилось на наших очах"],
   ["🌕", fmt(Math.floor(ms / (29.530588 * DAY))), "разів Місяць ставав повним, поки ми були разом"],
-  ["💓", fmt(mins * 140 / 1e6) + " млн", "ударів двох сердець, що б'ються поруч"],
-  ["🌍", fmt(ms / 1000 * 29.78 / 1e9, 1) + " млрд км", "ми пролетіли разом навколо Сонця"]
+  ["🫀", fmt(mins * 140 / 1e6) + " млн", "ударів двох сердець, що б'ються поруч"],
+  ["🌞", fmt(ms / 1000 * 29.78 / 1e9, 1) + " млрд км", "ми пролетіли разом навколо Сонця"]
 ];
 document.getElementById('stats').innerHTML = stats.map(s =>
   `<li><span class="e">${s[0]}</span><div class="txt"><b>${s[1]}</b><span class="t">${s[2]}</span></div></li>`).join('');
